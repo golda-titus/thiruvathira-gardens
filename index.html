@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiruvathira Gardens - Premium Orchids & Exotic Plants</title>
+    <meta name="description" content="Thiruvathira Gardens - Premium orchids and exotic plants from Kerala. Nationwide delivery across India. Specializing in Dendrobium, Vanda, Anthurium, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFCFB;
+        }
+        .floral-lavender { color: #E9D5FF; }
+        .floral-pink { color: #FCE7F3; }
+        .floral-green { color: #D1FAE5; }
+        .floral-white { background-color: #FDFCFB; }
+        .floral-gray { color: #374151; }
+        .bg-floral-lavender { background-color: #E9D5FF; }
+        .bg-floral-pink { background-color: #FCE7F3; }
+        .bg-floral-green { background-color: #D1FAE5; }
+        .bg-floral-white { background-color: #FDFCFB; }
+        .text-floral-gray { color: #374151; }
+        .text-floral-lavender { color: #E9D5FF; }
+        .text-floral-green { color: #D1FAE5; }
+        .border-floral-lavender { border-color: #E9D5FF; }
+        .hover\:bg-floral-lavender:hover { background-color: #E9D5FF; }
+        .hover\:text-floral-lavender:hover { color: #E9D5FF; }
+        .gradient-floral { background: linear-gradient(135deg, #E9D5FF, #D1FAE5); }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out; }
+        
+        /* Hover effects */
+        .hover-lift:hover { transform: translateY(-5px); }
+        .hover-scale:hover { transform: scale(1.05); }
+        
+        /* Transition effects */
+        .transition-all { transition: all 0.3s ease; }
+        
+        /* Mobile menu */
+        .mobile-menu { display: none; }
+        .mobile-menu.active { display: block; }
+    </style>
+</head>
+<body class="bg-floral-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <div class="text-2xl font-serif font-bold text-floral-gray hover-scale transition-all">
+                        🌸 Thiruvathira Gardens
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">Home</a>
+                    <a href="#about" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">About</a>
+                    <a href="#shop" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">Shop</a>
+                    <a href="#gallery" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">Gallery</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">Contact</a>
+                    <a href="#delivery" class="nav-link px-3 py-2 text-sm font-medium text-floral-gray hover:text-floral-lavender transition-colors duration-200">Delivery</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-floral-gray hover:text-floral-lavender transition-colors duration-200">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu md:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">Home</a>
+                    <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">About</a>
+                    <a href="#shop" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">Shop</a>
+                    <a href="#gallery" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">Gallery</a>
+                    <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">Contact</a>
+                    <a href="#delivery" class="mobile-nav-link block px-3 py-2 text-base font-medium rounded-md text-floral-gray hover:text-floral-lavender hover:bg-floral-lavender/5 transition-colors duration-200">Delivery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Beautiful orchids" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-floral-lavender/40 to-floral-green/40"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fadeInUp">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg">
+                    Thiruvathira Gardens
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
+                    Blooming Beauty Across India
+                </p>
+                <p class="text-lg text-white/80 mb-12 max-w-2xl mx-auto drop-shadow-sm">
+                    Discover our exquisite collection of orchids, seedlings, and tropical plants 
+                    nurtured with passion in the heart of Kerala.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="animate-fadeInUp" style="animation-delay: 0.2s;">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#shop" class="group relative px-8 py-4 gradient-floral text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover-scale">
+                        <span class="relative z-10">Shop Now</span>
+                    </a>
+                    
+                    <a href="#gallery" class="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-floral-gray transition-all duration-300 hover-scale">
+                        Explore Orchids
+                    </a>
+                    
+                    <a href="#contact" class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-full hover:bg-white/30 transition-all duration-300 hover-scale">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-floral-white to-floral-lavender/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fadeInUp">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-floral-gray mb-6">
+                    Welcome to Thiruvathira Gardens
+                </h2>
+                <p class="text-xl text-floral-gray/80 max-w-3xl mx-auto leading-relaxed">
+                    Nestled in the beautiful landscapes of Ezhukone, Kottarakkara, Kerala, 
+                    we specialize in cultivating exotic orchids and tropical plants. Our passion 
+                    for nature's beauty drives us to bring you the finest collection of plants 
+                    from across India.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp">
+                    <div class="text-4xl mb-4">🌸</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-3">Exotic Orchids</h3>
+                    <p class="text-floral-gray/70 leading-relaxed">Premium collection of rare and beautiful orchids from around the world</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-3">Quality Seedlings</h3>
+                    <p class="text-floral-gray/70 leading-relaxed">Healthy, well-nurtured seedlings ready for your garden</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="text-4xl mb-4">🚚</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-3">Nationwide Delivery</h3>
+                    <p class="text-floral-gray/70 leading-relaxed">Safe packaging and reliable delivery across India</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4">🌿</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-3">Expert Care</h3>
+                    <p class="text-floral-gray/70 leading-relaxed">Professional guidance and care tips for all plants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fadeInUp">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-floral-gray mb-6">
+                    Our Plant Collection
+                </h2>
+                <p class="text-xl text-floral-gray/80 max-w-3xl mx-auto leading-relaxed">
+                    Discover our carefully curated selection of exotic orchids, tropical plants, 
+                    and seedlings. Each plant is nurtured with love and care in our Kerala nursery.
+                </p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover-lift animate-fadeInUp">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Purple Dendrobium Orchid" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-floral-lavender text-white px-3 py-1 rounded-full text-sm font-medium">Dendrobium</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-floral-gray mb-2">Purple Dendrobium Orchid</h3>
+                        <p class="text-floral-gray/70 mb-4">Beautiful purple and white orchid perfect for indoor decoration.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-floral-lavender">₹1,200</span>
+                        </div>
+                        <button onclick="openWhatsApp('Purple Dendrobium Orchid')" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center justify-center space-x-2">
+                            <span>💬</span>
+                            <span>Enquire via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover-lift animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Blue Vanda Orchid" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-floral-lavender text-white px-3 py-1 rounded-full text-sm font-medium">Vanda</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-floral-gray mb-2">Blue Vanda Orchid</h3>
+                        <p class="text-floral-gray/70 mb-4">Stunning blue and purple vanda orchid that thrives in bright light.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-floral-lavender">₹1,800</span>
+                        </div>
+                        <button onclick="openWhatsApp('Blue Vanda Orchid')" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center justify-center space-x-2">
+                            <span>💬</span>
+                            <span>Enquire via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover-lift animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Red Anthurium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-floral-lavender text-white px-3 py-1 rounded-full text-sm font-medium">Anthurium</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-floral-gray mb-2">Red Anthurium</h3>
+                        <p class="text-floral-gray/70 mb-4">Classic red anthurium with glossy heart-shaped flowers.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-2xl font-bold text-floral-lavender">₹800</span>
+                        </div>
+                        <button onclick="openWhatsApp('Red Anthurium')" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center justify-center space-x-2">
+                            <span>💬</span>
+                            <span>Enquire via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-b from-floral-white to-floral-lavender/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fadeInUp">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-floral-gray mb-6">
+                    Our Gallery
+                </h2>
+                <p class="text-xl text-floral-gray/80 max-w-3xl mx-auto leading-relaxed">
+                    Take a visual journey through our nursery, beautiful plants, and the care 
+                    we put into every order. See the beauty that awaits you.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Purple Dendrobium Orchids" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">Purple Dendrobium Orchids</p>
+                        <p class="text-white/80 text-sm">Orchids</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blue Vanda Orchids" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">Blue Vanda Orchids</p>
+                        <p class="text-white/80 text-sm">Orchids</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Red Anthurium Flowers" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">Red Anthurium Flowers</p>
+                        <p class="text-white/80 text-sm">Anthurium</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="White Phalaenopsis Orchids" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">White Phalaenopsis Orchids</p>
+                        <p class="text-white/80 text-sm">Orchids</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nursery Greenhouse" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">Nursery Greenhouse</p>
+                        <p class="text-white/80 text-sm">Nursery</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover-lift animate-fadeInUp" style="animation-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desert Rose (Adenium)" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white font-medium">Desert Rose (Adenium)</p>
+                        <p class="text-white/80 text-sm">Adenium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fadeInUp">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-floral-gray mb-6">
+                    Get in Touch
+                </h2>
+                <p class="text-xl text-floral-gray/80 max-w-3xl mx-auto leading-relaxed">
+                    We'd love to hear from you! Whether you have questions about our plants, 
+                    need care advice, or want to place an order, we're here to help.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 animate-fadeInUp">
+                    <h3 class="text-2xl font-semibold text-floral-gray mb-6">Send us a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-floral-gray mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-floral-lavender/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-floral-lavender focus:border-transparent transition-all duration-200" placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-floral-gray mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-floral-lavender/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-floral-lavender focus:border-transparent transition-all duration-200" placeholder="Enter your email address">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-floral-gray mb-2">Message</label>
+                            <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 border border-floral-lavender/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-floral-lavender focus:border-transparent transition-all duration-200 resize-none" placeholder="Tell us about your plant needs or any questions you have..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full gradient-floral text-white font-semibold py-4 px-6 rounded-xl hover:shadow-lg transition-all duration-200">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="bg-gradient-to-br from-floral-lavender/10 to-floral-green/10 rounded-2xl p-8">
+                        <h3 class="text-2xl font-semibold text-floral-gray mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-green-600 text-xl">📞</span>
+                                <div>
+                                    <p class="font-medium text-floral-gray">Phone Numbers:</p>
+                                    <p class="text-floral-gray/70">+91 9744001827</p>
+                                    <p class="text-floral-gray/70">+91 9497620530</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-green-600 text-xl">📍</span>
+                                <div>
+                                    <p class="font-medium text-floral-gray">Location:</p>
+                                    <p class="text-floral-gray/70">Ezhukone, Kottarakkara</p>
+                                    <p class="text-floral-gray/70">Kollam District, Kerala, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-green-600 text-xl">🕒</span>
+                                <div>
+                                    <p class="font-medium text-floral-gray">Business Hours:</p>
+                                    <p class="text-floral-gray/70">Mon-Sat: 9:00 AM - 6:00 PM</p>
+                                    <p class="text-floral-gray/70">Sunday: 10:00 AM - 4:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold text-floral-gray mb-6">Quick Actions</h3>
+                        <div class="space-y-4">
+                            <button onclick="openWhatsApp('General Inquiry')" class="w-full flex items-center space-x-3 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-200">
+                                <span class="text-2xl">💬</span>
+                                <div class="text-left">
+                                    <p class="font-medium text-floral-gray">WhatsApp Order</p>
+                                    <p class="text-sm text-floral-gray/70">Quick order placement</p>
+                                </div>
+                            </button>
+                            
+                            <a href="tel:+919744001827" class="w-full flex items-center space-x-3 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-200">
+                                <span class="text-2xl">📞</span>
+                                <div class="text-left">
+                                    <p class="font-medium text-floral-gray">Call for Advice</p>
+                                    <p class="text-sm text-floral-gray/70">Plant care consultation</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="py-20 bg-gradient-to-b from-floral-white to-floral-lavender/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fadeInUp">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-floral-gray mb-6">
+                    Delivery & Care Information
+                </h2>
+                <p class="text-xl text-floral-gray/80 max-w-3xl mx-auto leading-relaxed">
+                    We deliver our beautiful plants safely across India with proper care instructions. 
+                    Learn about our delivery process and how to care for your new plants.
+                </p>
+            </div>
+
+            <!-- Delivery Zones -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4">Kerala</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Time:</span>
+                            <span class="font-medium text-floral-gray">1-2 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Cost:</span>
+                            <span class="font-medium text-floral-lavender">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="text-4xl mb-4">🚗</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4">South India</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Time:</span>
+                            <span class="font-medium text-floral-gray">2-3 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Cost:</span>
+                            <span class="font-medium text-floral-lavender">₹150</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="text-4xl mb-4">🚛</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4">North India</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Time:</span>
+                            <span class="font-medium text-floral-gray">3-5 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Cost:</span>
+                            <span class="font-medium text-floral-lavender">₹250</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center hover-lift animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4">✈️</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4">East/West India</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Time:</span>
+                            <span class="font-medium text-floral-gray">3-4 days</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-floral-gray/70">Cost:</span>
+                            <span class="font-medium text-floral-lavender">₹200</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plant Care Tips -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-floral-lavender/10 to-floral-green/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fadeInUp">
+                    <div class="text-4xl mb-4 text-center">💧</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4 text-center">Watering</h3>
+                    <ul class="space-y-2">
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Water orchids once a week
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Check soil moisture before watering
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Use room temperature water
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-floral-lavender/10 to-floral-green/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="text-4xl mb-4 text-center">☀️</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4 text-center">Light</h3>
+                    <ul class="space-y-2">
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Provide bright, indirect light
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Avoid direct sunlight
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Rotate plants weekly
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-floral-lavender/10 to-floral-green/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="text-4xl mb-4 text-center">🌡️</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4 text-center">Temperature</h3>
+                    <ul class="space-y-2">
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Maintain 18-24°C temperature
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Avoid cold drafts
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Provide good air circulation
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-floral-lavender/10 to-floral-green/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="text-4xl mb-4 text-center">🌿</div>
+                    <h3 class="text-xl font-semibold text-floral-gray mb-4 text-center">Fertilizing</h3>
+                    <ul class="space-y-2">
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Fertilize monthly during growing season
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Use orchid-specific fertilizer
+                        </li>
+                        <li class="text-floral-gray/70 text-sm flex items-start">
+                            <span class="text-floral-lavender mr-2">•</span>
+                            Dilute fertilizer properly
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-floral-lavender/20 to-floral-green/20 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2 animate-fadeInUp">
+                    <h3 class="text-2xl font-serif font-bold text-floral-gray mb-4">
+                        🌸 Thiruvathira Gardens
+                    </h3>
+                    <p class="text-floral-gray/80 mb-4 leading-relaxed">
+                        Specializing in exotic orchids and tropical plants, bringing nature's beauty 
+                        to homes across India from our nursery in Kerala.
+                    </p>
+                    <div class="text-floral-gray/80">
+                        <p class="font-medium">📍 Location:</p>
+                        <p>Ezhukone, Kottarakkara</p>
+                        <p>Kollam District, Kerala, India</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-fadeInUp" style="animation-delay: 0.1s;">
+                    <h4 class="text-lg font-semibold text-floral-gray mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">About Us</a></li>
+                        <li><a href="#shop" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">Our Plants</a></li>
+                        <li><a href="#gallery" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">Gallery</a></li>
+                        <li><a href="#delivery" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">Delivery Info</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="animate-fadeInUp" style="animation-delay: 0.2s;">
+                    <h4 class="text-lg font-semibold text-floral-gray mb-4">Contact Us</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-600">📞</span>
+                            <a href="tel:+919744001827" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">+91 9744001827</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-600">📞</span>
+                            <a href="tel:+919497620530" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">+91 9497620530</a>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-green-600">💬</span>
+                            <button onclick="openWhatsApp('General Inquiry')" class="text-floral-gray/80 hover:text-floral-lavender transition-colors duration-200">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-floral-lavender/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center animate-fadeInUp" style="animation-delay: 0.3s;">
+                <p class="text-floral-gray/60 text-sm">
+                    © 2024 Thiruvathira Gardens. All rights reserved.
+                </p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <span class="text-floral-gray/60 text-sm">
+                        Made with 🌸 for plant lovers
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // WhatsApp function
+        function openWhatsApp(productName) {
+            const message = `Hi! I'm interested in ${productName}. Could you please provide more details?`;
+            const whatsappUrl = `https://wa.me/919744001827?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hi! My name is ${name} (${email}). ${message}`;
+            const whatsappUrl = `https://wa.me/919744001827?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Show success message
+            alert('Thank you! Your message has been sent to WhatsApp.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+
+        // Set initial body opacity
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in';
+    </script>
+</body>
+</html>
